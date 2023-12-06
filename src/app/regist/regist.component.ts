@@ -22,7 +22,9 @@ pass:string="none";
     email: new FormControl('',[Validators.required, Validators.email]),
     address: new FormControl('',[Validators.required, Validators.minLength(10)]),
     pwd: new FormControl('',[Validators.required, Validators.minLength(6), Validators.maxLength(15)]),
-    rpwd: new FormControl('')
+    rpwd: new FormControl(''),
+    dateFor: new FormControl(''),
+    time: new FormControl('')
   })
 
   updateData()

@@ -5,18 +5,20 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistComponent } from './regist/regist.component';
-import { ScheduleComponent } from './schedule/schedule.component';
+
 import { DisplayComponent } from './display/display.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersService } from './services/users.service';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
     RegistComponent,
-    ScheduleComponent,
-    DisplayComponent
+    DisplayComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

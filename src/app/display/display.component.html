@@ -1,11 +1,15 @@
-<div class="container" style="max-width: 800px;">
-    <div class="card py-4" >
-            <div class="d-flex justify-content-center">
-                <div>
+
+<div class="container-fluid gx-0 p-5" >
+    <div class="card py-4 m-auto" style="max-width: 1000px;">
+            <div class="d-flex p-3" style="background-color: rgb(13, 148, 157);">
+              <div class="">
+                <p style="line-height:-2px; font-family: cursive; font-size: 30px; color: white;">Client Management Tool</p>
+              </div>
+                <div  class="mx-2">
                     <button class="btn btn-primary mx-2" routerLink="/register">Add</button>
                 </div>
                 <div>
-                    <button class="btn btn-primary">Delete</button>
+              
                 </div>
             </div>
             <div class="table">
@@ -17,23 +21,64 @@
                           <th scope="col">Email</th>
                           <th scope="col">Date</th>
                           <th scope="col">Time</th>
+                          <th scope="col">Actions</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr *ngFor="let users of list">
+                        <tr *ngFor="let users of userList">
                           <th scope="row">{{users.id}}</th>
                           <td>{{users.name}}</td>
                           <td>{{users.email}}</td>
-                          <td>Date</td>
-                          <td>Time</td>
-                          <td><button class="btn btn-success" routerLink="/schedule">schedule</button></td>
+                          <td *ngIf="users.date" >{{users.date}}</td>
+                          <td *ngIf="users.time">{{users.time}}</td>
+                          <td *ngIf="!users.date" ><i>Set Date</i></td>
+                          <td *ngIf="!users.time"><i>Set Time</i></td>
+                          <td><button class="btn btn-success" (click)="setData(users)">schedule</button></td>
+                          <td><button class="btn btn-danger" (click)="deleteUser(users.id)">Delete</button></td>
                         </tr>
                      </tbody>
                 </table>
-              </div>
-              <div *ngFor="let users of list2">
-                  {{users.date}}
-                  {{users.time}}
-              </div>
+            </div>
     </div>
+ 
+    <div class="form-wrapper" *ngIf="isShow">
+      <div class="card p-4">
+          <form [formGroup]="scheduleForm" (ngSubmit)="scheduleFor()">
+              <div class="row">
+                  <div class="col-12 text-center mb-3">
+                      <h2 class="dispaly-5">Schedule</h2>    
+                  </div>
+      
+                  <div class="mb-3 col-md-6" >
+                  <label for="dateFor" class="form-label">Date</label>
+                  <input type="date" class="form-control" name="dateFor" formControlName="dateFor"/>
+                  <div class="form-text text-danger" *ngIf="Date.errors?.['required'] && (Date.touched || Date.dirty)">
+                      *Date is required
+                  </div>
+                  </div>
+      
+                  <div class="mb-3 col-md-6">
+                  <label for="time" class="form-label">Time</label>
+                  <input type="time" class="form-control" name="time" formControlName="time"/>
+                   <div class="form-text text-danger" *ngIf="Time.errors?.['required'] && (Time.touched || Time.dirty)">
+                      *Time is required
+                  </div>
+  
+                  </div>
+                  <div class="row justify-content-around">
+                    <div class="col-2">                
+                      <button type="submit" class="btn btn-info" >Submit</button>
+                     
+                    </div>
+                    <div class="col-2">
+                      <button type="submit" class="btn btn-danger" (click)="cancel()" >cancel</button>
+                    </div>
+                  </div>
+  
+              </div>
+          </form>
+      </div>
+  </div>
 </div>
+
+

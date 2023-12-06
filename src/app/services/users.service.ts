@@ -8,23 +8,23 @@ export class UsersService {
 
   private _url='http://localhost:3000/users'
   constructor(private http: HttpClient) { }
+  
   userSignUp(data:object)
    {
-     return this.http.post(" http://localhost:3000/users", data);
+     return this.http.post(this._url, data);
    }
-   getData():Observable<any>{
+
+  getData():Observable<any>{
    return this.http.get<any>(this._url)
   }
-  schedule(data:object)
+  
+  deleteData(id: string):Observable <any>
   {
-    return this.http.post("http://localhost:3000/schedule", data);
+    return this.http.delete(this._url+'/'+id)
   }
-  scheduleData():Observable<any>{
-    return this.http.get<any>("  http://localhost:3000/schedule")
+
+  putData(data:any){
+      return this.http.put(this._url +'/'+data.id, data)
   }
 }
 
- // this.http.get('http://localhost:3000/users').subscribe(data => {
-    //   this.usersList.push(data)
-    // });
-    // console.log(this.usersList);

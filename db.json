@@ -1,48 +1,31 @@
 {
   "users": [
     {
-      "name": "william",
-      "email": "william@gmail.com",
-      "address": "100feets Road",
-      "pwd": "qwerty",
-      "rpwd": "qwerty",
-      "id": 1
-    },
-    {
       "name": "Mark pastor warangal",
       "email": "MarkKv63@gmail.com",
       "address": "100 FEETS ROAD, ENUMAMULA MARKET ROAD",
-      "pwd": "1234567",
-      "rpwd": "1234567",
-      "id": 2
-    },
-    {
-      "name": "ajith",
-      "email": "ajith@gmail.com",
-      "address": "11-1-357/B",
-      "pwd": "zxczxc",
-      "rpwd": "zxczxc",
-      "id": 3
-    },
-    {
-      "name": "vijay",
-      "email": "vijay@gmail.com",
-      "address": "11-1-357/B",
-      "pwd": "qawsed",
-      "rpwd": "qawsed",
-      "id": 4
-    }
-  ],
-  "schedule": [
-    {
-      "date": "2023-12-06",
-      "time": "02:41",
+      "pwd": "qazwsx",
+      "date": "2023-12-07",
+      "time": "06:56",
       "id": 1
     },
     {
-      "date": "2023-12-06",
-      "time": "04:48",
+      "name": "Komaravelly mark",
+      "email": "mark3_in@yahoo.com",
+      "address": "11-1-357/B",
+      "pwd": "qazwsx",
+      "date": "2023-12-14",
+      "time": "15:56",
       "id": 2
+    },
+    {
+      "name": "william",
+      "email": "MarkKv63@gmail.com",
+      "address": "100 FEETS ROAD, ENUMAMULA MARKET ROAD",
+      "pwd": "      ",
+      "date": "2023-12-14",
+      "time": "20:59",
+      "id": 3
     }
   ]
 }
