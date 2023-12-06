@@ -29,7 +29,7 @@ pass:string="none";
 
   updateData()
   {
-    if(this.pwd.value===this.rpwd.value)
+    if(this.pwd.value===this.rpwd.value )
     {
       console.log("submitted");
       console.log(this.registForm.value);
@@ -56,7 +56,7 @@ pass:string="none";
   {
     return this.registForm.get("email") as FormControl;
   }
-  get address(): FormControl
+  get Address(): FormControl
   {
     return this.registForm.get("address") as FormControl;
   }

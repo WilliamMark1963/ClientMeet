@@ -24,7 +24,7 @@
             <label for="email" class="form-label">Email address</label>
             <input type="email" class="form-control" name="email" formControlName="email"/>
              <div class="form-text text-danger" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">
-                *Email is invalid
+                *Email is required
             </div>
             <div class="form-text text-danger" *ngIf="email.errors?.['email'] && (email.touched || email.dirty)">
                 *Email is invalid
@@ -34,11 +34,11 @@
             <div class="mb-3 col-12">
             <label for="address" class="form-label">Address</label>
             <input type="text" class="form-control" name="address" formControlName="address" required/>
-            <div class="form-text" *ngIf="address.errors?.['address']  && (address.touched || address.dirty)">
+            <div class="form-text text-danger" *ngIf="Address.errors?.['required'] && (Address.touched || Address.dirty)">
                 *Address is required
             </div>
-            <div class="form-text" *ngIf="address.errors?.['minlength'] && (address.touched || address.dirty)">
-                *Address is too short
+            <div class="form-text text-danger" *ngIf="Address.errors?.['minlength'] && (Address.touched || Address.dirty)">
+                *Address must containe minimum 10 characters
             </div>
             </div>
 
