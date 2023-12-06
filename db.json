@@ -1,31 +1,3 @@
 {
-  "users": [
-    {
-      "name": "Mark pastor warangal",
-      "email": "MarkKv63@gmail.com",
-      "address": "100 FEETS ROAD, ENUMAMULA MARKET ROAD",
-      "pwd": "qazwsx",
-      "date": "2023-12-07",
-      "time": "06:56",
-      "id": 1
-    },
-    {
-      "name": "Komaravelly mark",
-      "email": "mark3_in@yahoo.com",
-      "address": "11-1-357/B",
-      "pwd": "qazwsx",
-      "date": "2023-12-14",
-      "time": "15:56",
-      "id": 2
-    },
-    {
-      "name": "william",
-      "email": "MarkKv63@gmail.com",
-      "address": "100 FEETS ROAD, ENUMAMULA MARKET ROAD",
-      "pwd": "      ",
-      "date": "2023-12-14",
-      "time": "20:59",
-      "id": 3
-    }
-  ]
+  "users": []
 }
