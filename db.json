@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "name": "william",
+      "email": "william@gmail.com",
+      "address": "100feets Road",
+      "pwd": "qwerty",
+      "rpwd": "qwerty",
+      "id": 1
+    },
+    {
+      "name": "Mark pastor warangal",
+      "email": "MarkKv63@gmail.com",
+      "address": "100 FEETS ROAD, ENUMAMULA MARKET ROAD",
+      "pwd": "1234567",
+      "rpwd": "1234567",
+      "id": 2
+    },
+    {
+      "name": "ajith",
+      "email": "ajith@gmail.com",
+      "address": "11-1-357/B",
+      "pwd": "zxczxc",
+      "rpwd": "zxczxc",
+      "id": 3
+    },
+    {
+      "name": "vijay",
+      "email": "vijay@gmail.com",
+      "address": "11-1-357/B",
+      "pwd": "qawsed",
+      "rpwd": "qawsed",
+      "id": 4
+    }
+  ],
+  "schedule": [
+    {
+      "date": "2023-12-06",
+      "time": "02:41",
+      "id": 1
+    },
+    {
+      "date": "2023-12-06",
+      "time": "04:48",
+      "id": 2
+    }
+  ]
+}

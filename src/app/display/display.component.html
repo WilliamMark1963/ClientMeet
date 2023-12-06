@@ -1,0 +1,39 @@
+<div class="container" style="max-width: 800px;">
+    <div class="card py-4" >
+            <div class="d-flex justify-content-center">
+                <div>
+                    <button class="btn btn-primary mx-2" routerLink="/register">Add</button>
+                </div>
+                <div>
+                    <button class="btn btn-primary">Delete</button>
+                </div>
+            </div>
+            <div class="table">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Time</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let users of list">
+                          <th scope="row">{{users.id}}</th>
+                          <td>{{users.name}}</td>
+                          <td>{{users.email}}</td>
+                          <td>Date</td>
+                          <td>Time</td>
+                          <td><button class="btn btn-success" routerLink="/schedule">schedule</button></td>
+                        </tr>
+                     </tbody>
+                </table>
+              </div>
+              <div *ngFor="let users of list2">
+                  {{users.date}}
+                  {{users.time}}
+              </div>
+    </div>
+</div>
