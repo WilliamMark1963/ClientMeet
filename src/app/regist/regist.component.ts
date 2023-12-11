@@ -34,8 +34,9 @@ pass:string="none";
       console.log("submitted");
       console.log(this.registForm.value);
       this.user.userSignUp(this.registForm.value).subscribe((result)=>{
-          console.log(result);})
-      this.route.navigate(['display'])
+          console.log(result);
+          this.route.navigate(['display']);
+        })
     }
   
     else{
