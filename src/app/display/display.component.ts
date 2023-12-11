@@ -41,8 +41,8 @@ constructor(private route: Router, private user : UsersService)
   deleteUser(id:any)
   {
     this.user.deleteData(id).subscribe((res)=>{
+      this.getUserdata()
     })
-    this.getUserdata()
   }
 
   onAdd()
@@ -74,8 +74,8 @@ constructor(private route: Router, private user : UsersService)
     this.dummyList.id=this.id;
     console.log(this.dummyList);
     this.user.putData(this.dummyList).subscribe((res)=>{
+      this.getUserdata();
     })
-    this.getUserdata();
   }
 
   get Date(): FormControl
